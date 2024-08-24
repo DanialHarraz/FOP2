@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Park Filter</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Car Park Filter</h1>
+    </header>
+    <main>
+        <div class="filter-container">
+            <div class="filter-section">
+                <label for="filterType">Filter by:</label>
+                <select id="filterType">
+                    <option value="prefix">Prefix</option>
+                    <option value="height">Gantry Height</option>
+                </select>
+            </div>
+            <div class="filter-section">
+                <label for="userInput">Enter input:</label>
+                <input type="text" id="userInput">
+            </div>
+            <div class="filter-section">
+                <label for="filterByDistance">Sort by distance:</label>
+                <select id="filterByDistance">
+                    <option value="true">Yes</option>
+                    <option value="false">No</option>
+                </select>
+            </div>
+            <div class="filter-section" id="distanceInputs" style="display: none;">
+                <label for="latitude">Latitude:</label>
+                <input type="text" id="latitude">
+                <label for="longitude">Longitude:</label>
+                <input type="text" id="longitude">
+            </div>
+            <filter-button></filter-button> 
+        </div>
+        <loading-spinner id="spinner"></loading-spinner>
+        <div id="errorMessage" style="color: red;"></div>
+        <div id="carparkResults"></div>
+    </main>
+
+
+    <script src="js/script.js"></script>
+</body>
+</html>
